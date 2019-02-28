@@ -3,7 +3,7 @@
   gather_facts: False
   remote_user: ec2-user #By default ec2-user must be used to connect by SSH
   vars:
-    keypair: key_name #Aqui va el nombre del key Pair name
+    keypair: mariossan_ubutnu #Aqui va el nombre del key Pair name
     instance_type: t2.micro
     security_group: launch-wizard-1 #Security group (SSH must be enabled)
     image: ami-04681a1dbd79675a5 #OS id image
@@ -17,7 +17,7 @@
         image: "{{ image }}"
         wait: true
         region: "{{ region }}"
-        vpc_subnet_id: subnet-76fca93c
+        vpc_subnet_id: subnet-e18d8089
         assign_public_ip: yes
       register: ec2
 
